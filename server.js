@@ -103,4 +103,7 @@ app.get('/api/news', async (req, res) => {
 app.get('/api/ping', (req, res) => res.json({ ok: true }));
 
 const PORT = process.env.PORT || 8080;
+app.get("/", (req, res) => {
+  res.send("✅ SmartWorldNews backend is running! Use /api/news to fetch AI-summarized news.");
+});
 app.listen(PORT, () => console.log(`News-AI backend listening on ${PORT}`));
